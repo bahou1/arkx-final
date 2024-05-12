@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "66410bcb159a6e7e2def73fd",
+    "restaurantName": "Sahbi Sahib",
+    "restaurantAddress": "Marrakech Address Example 2",
+    "coverPic": "https://media.timeout.com/images/106119650/1536/1152/image.webp"
+},
+
+  {
+      "_id": "66410510159a6e7e2deb3e72",
+      "title": "moroccan-couscous",
+      "price": "150.00 MAD",
+      "rating": 4,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2015/11/moroccan-couscous.jpg"
+  },
+  {
+      "_id": "66410510159a6e7e2deb3e73",
+      "title": "zaalouk",
+      "price": "120.00 MAD",
+      "rating": 3,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2015/11/zaalouk.jpg"
+  },
+  {
+      "_id": "66410510159a6e7e2deb3e74",
+      "title": "what-to-eat-in-morocco",
+      "price": "200.00 MAD",
+      "rating": 5,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2015/11/what-to-eat-in-morocco.jpg"
+  },
+  {
+      "_id": "66410510159a6e7e2deb3e75",
+      "title": "harira-moroccan-food",
+      "price": "180.00 MAD",
+      "rating": 4,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2019/10/harira-moroccan-food.jpg"
+  },
+  {
+      "_id": "66410510159a6e7e2deb3e76",
+      "title": "sheep-head-food-morocco",
+      "price": "250.00 MAD",
+      "rating": 4,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2015/11/sheep-head-food-morocco.jpg"
+  },
+  {
+      "_id": "66410510159a6e7e2deb3e77",
+      "title": "sardines-chermoula",
+      "price": "170.00 MAD",
+      "rating": 4,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2015/11/sardines-chermoula.jpg"
+  },
+  {
+      "_id": "66410510159a6e7e2deb3e78",
+      "title": "moroccan-mint-tea",
+      "price": "50.00 MAD",
+      "rating": 4,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2015/11/moroccan-mint-tea.jpg"
+  },
+  {
+      "_id": "66410510159a6e7e2deb3e79",
+      "title": "moroccan-brochettes",
+      "price": "160.00 MAD",
+      "rating": 4,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2015/11/moroccan-brochettes.jpg"
+  },
+  {
+      "_id": "66410510159a6e7e2deb3e80",
+      "title": "snail-soup-morocco",
+      "price": "220.00 MAD",
+      "rating": 4,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2015/11/snail-soup-morocco.jpg"
+  },
+  {
+      "_id": "66410510159a6e7e2deb3e81",
+      "title": "tanjia",
+      "price": "200.00 MAD",
+      "rating": 4,
+      "imgUrl": "https://localadventurer.com/wp-content/uploads/2015/11/tanjia.jpg"
+  }
+]
