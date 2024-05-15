@@ -5,7 +5,7 @@ import Logo from '../assets/logo.png';
 const SideMenu = () => {
     return (
         <div className="flex justify-center flex-col w-72 h-screen bg-white">
-            <nav className='text-sm text-gray-500'>
+            <nav className='text-sm font-lato font-bold text-gray-500'>
                 <ul className="mt-9 pl-8">
                     <li>
                         <img src={Logo} alt="Logo" className="justify-center mb-20 w-30 h-15 mx-auto" />
