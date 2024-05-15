@@ -1,10 +1,10 @@
 import React from 'react';
+import SideMenu from '../components/SideMenu';
 
 const Dashboard = () => {
     return (
-        <div>
-            <h1 className="text-3xl font-bold underline">Dashboard</h1>
-            {/* Add your dashboard content here */}
+        <div className="bg-gray-400 min-h-screen">
+            <SideMenu/>
         </div>
     );
 };
