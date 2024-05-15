@@ -1,6 +1,7 @@
 import React from 'react';
 import SideMenu from '../components/SideMenu';
 import SearchDash from '../components/SearchDash';
+import CustomerTable from '../components/CustomerTable';
 
 const Dashboard = () => {
     return (
@@ -8,8 +9,9 @@ const Dashboard = () => {
             <div className="">
                 <SideMenu/>
             </div>
-            <div className="gap-">
+            <div className="flex flex-col gap-4">
                 <SearchDash/>
+                <CustomerTable/>
             </div>
         </div>
     );
