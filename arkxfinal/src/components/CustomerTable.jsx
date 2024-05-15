@@ -29,16 +29,19 @@ const CustomerTable = () => {
                 </tr>
             </thead>
             <tbody className="rounded-table">
-                <tr style={{ height: '20px' }}></tr> {/* This is the new line */}
+                <tr style={{ height: '20px' }}></tr>
                 {data.map((row, index) => (
-                    <tr key={index} className="tableRow"> {/* Apply the CSS class here */}
+                    <tr key={index} className="tableRow">
                         <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.id}</td>
                         <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.joinDate}</td>
                         <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.name}</td>
                         <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.location}</td>
                         <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.totalSpent}</td>
-                        <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.lastOrder}</td>
-                    </tr>
+                        <td className="px-4 py-8" style={{ textAlign: 'center' }}>
+    <div style={{ backgroundColor: 'lightgray', padding: '10px', borderRadius: '5px' }}>
+        {row.lastOrder}
+    </div>
+</td>                    </tr>
                 ))}
             </tbody>
         </table>
