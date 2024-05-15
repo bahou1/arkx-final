@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import ImgContainer from '../components/ImgContainer';
 import Card from '../components/Card';
-import Footer from '../components/Footerbot';
+import Filters from '../components/Filters.jsx';
 
 /**
  * Represents the RestaurantProfile component.
@@ -38,13 +38,13 @@ const RestaurantProfile = () => {
         <div>
             <Navbar/> {/* Render the navigation bar */}
             <ImgContainer restaurantName={restaurantName} restaurantAddress={restaurantAddress} coverPic={coverPic}/> {/* Render the image container */}
-            <div className="grid grid-cols-4 gap-8 absolute right-5">
+            <div className="grid grid-cols-4 gap-5 absolute right-5">
                 {/* Render a list of cards for each item */}
                 {data.slice(1).map((item, index) => (
                     <Card key={index} title={item.title} price={item.price} rating={item.rating} imgUrl={item.imgUrl} />
                 ))}
             </div>
-            <Footer/>
+            <Filters/>
         </div>
     
     );

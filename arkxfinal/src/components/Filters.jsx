@@ -2,10 +2,10 @@ import React from 'react';
 
 const FilteringBox = () => {
     return (
-        <div style={{ width: '27vw' }}  className=" p-9 bg-gray-100  color-orange-200 ml-28 filtering-box flex flex-col space-y-4">
-            <div className="bg-white p-7 rounded-xl filter-section">
-                <h2 className="text-slate-500 text-3xl filtering-box-title font-lato font-bold pb-2 ">Meal Category</h2>
-                <div className="text-slate-400 text-xl categories flex flex-col gap-1 space-y-2">
+        <div style={{ width: '24vw' }}  className=" p-5 bg-gray-100  ml-20 filtering-box flex flex-col space-y-4">
+            <div className="bg-white p-5 rounded-2xl filter-section">
+                <h2 className="text-slate-500 text-3xl filtering-box-title font-lato font-bold pb-5 ">Meal Category</h2>
+                <div className="text-slate-400 text-xl categories flex flex-col gap-1 space-y-3">
                     <label className="flex space-x-2">
                         <input type="checkbox" name="category" value="Tajine" />
                         <span>Tajine</span>
