@@ -21,7 +21,7 @@ const DashboardPage = () => {
     console.log("Active component:", activeComponent);
 
     return (
-        <div className="bg-orange-200 h-full flex">
+        <div className="bg-gray-200 h-full flex fixed w-full h-full">
             <div className="fixed"> 
                 <SideMenu onMenuItemClick={handleMenuItemClick} />
             </div>
