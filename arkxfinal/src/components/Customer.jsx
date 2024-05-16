@@ -17,34 +17,34 @@ const Customer = () => {
     ];
 
     return (
-        <table className="table-auto" style={{ width: '1350px' }}>
-            <thead>
-                <tr style={{ backgroundColor: '#87A922' }}>
-                    <th className="px-4 py-3" style={{ color: '#FFFFFF', textAlign: 'center' }}>Customer ID</th>
-                    <th className="px-4 py-3" style={{ color: '#FFFFFF', textAlign: 'center' }}>Join Date</th>
-                    <th className="px-4 py-3" style={{ color: '#FFFFFF', textAlign: 'center' }}>Customer Name</th>
-                    <th className="px-4 py-3" style={{ color: '#FFFFFF', textAlign: 'center' }}>Location</th>
-                    <th className="px-4 py-3" style={{ color: '#FFFFFF', textAlign: 'center' }}>Total Spent</th>
-                    <th className="px-4 py-3" style={{ color: '#FFFFFF', borderTopRightRadius: '5px', borderBottomRightRadius: '5px', textAlign: 'center' }}>Last Order</th>
-                </tr>
-            </thead>
-            <tbody className="rounded-table">
-                <tr style={{ height: '20px' }}></tr>
-                {data.map((row, index) => (
-                    <tr key={index} className="tableRow">
-                        <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.id}</td>
-                        <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.joinDate}</td>
-                        <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.name}</td>
-                        <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.location}</td>
-                        <td className="px-4 py-8" style={{ textAlign: 'center' }}>{row.totalSpent}</td>
-                        <td className="px-4 py-8" style={{ textAlign: 'center' }}>
-    <div style={{ backgroundColor: 'lightgray', padding: '10px', borderRadius: '5px' }}>
-        {row.lastOrder}
-    </div>
-</td>                    </tr>
-                ))}
-            </tbody>
-        </table>
+<table className="mt-8 w-full bg-white shadow-md rounded-lg overflow-hidden">
+    <thead>
+        <tr className="text-white uppercase text-sm leading-normal" style={{ backgroundColor: '#87A922' }}>
+            <th className="py-3 px-6 text-left" style={{ borderTopLeftRadius: '0.375rem' }}>Customer ID</th>
+            <th className="py-3 px-6 text-left">Join Date</th>
+            <th className="py-3 px-6 text-left">Customer Name</th>
+            <th className="py-3 px-6 text-left">Location</th>
+            <th className="py-3 px-6 text-left">Total Spent</th>
+            <th className="py-3 px-6 text-left" style={{ borderTopRightRadius: '0.375rem' }}>Last Order</th>
+        </tr>
+    </thead>
+    <tbody>
+        {data.map((row, index) => (
+            <tr key={index} className="border-b border-gray-200 hover:bg-gray-100">
+                <td className="py-3 px-6 text-left whitespace-nowrap">{row.id}</td>
+                <td className="py-3 px-6 text-left">{row.joinDate}</td>
+                <td className="py-3 px-6 text-left">{row.name}</td>
+                <td className="py-3 px-6 text-left">{row.location}</td>
+                <td className="py-3 px-6 text-left">{row.totalSpent}</td>
+                <td className="py-3 px-6 text-left">
+                    <div className="px-0 py-1 rounded-full">
+                        {row.lastOrder}
+                    </div>
+                </td>
+            </tr>
+        ))}
+    </tbody>
+</table>
     );
 };
 

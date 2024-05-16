@@ -311,7 +311,6 @@ const Wallet = () => {
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Wallet</h2>
 
       <div className="flex flex-row-reverse justify-center gap-9 items-center mb-4">
         {/* Transactions */}
@@ -331,10 +330,10 @@ const Wallet = () => {
 
         {/* Credit Card Info */}
         <div className="p-20 pr-60 rounded-lg shadow-md text-white" style={{background: 'linear-gradient(135deg, #87A922 0%, #4A772F 100%)'}}>
-          <h3 className="text-xl font-bold">Credit Card</h3>
-          <p className="mt-2">**** **** **** 1234</p>
-          <p className="mt-2">John Doe</p>
-          <p className="mt-2">10/24</p>
+          <h3 className="text-4xl font-bold">Credit Card</h3>
+          <p className="mt-2 text-xl ">**** **** **** 1234</p>
+          <p className="mt-2 text-xl">John Doe</p>
+          <p className="mt-2 text-xl">10/24</p>
         </div>
       </div>
 
