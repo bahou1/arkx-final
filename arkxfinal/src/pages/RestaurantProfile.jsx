@@ -6,8 +6,8 @@ import Filters from '../components/Filters.jsx';
 import { HashLoader } from 'react-spinners';
 
 const RestaurantProfile = () => {
-    const [data, setData] = useState([]); // Stores the data fetched from the API
-    const [loading, setLoading] = useState(true); // Indicates whether the data is still loading
+    const [data, setData] = useState([]); 
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('http://localhost:3000/api/restaurant-profile')
@@ -26,16 +26,13 @@ const RestaurantProfile = () => {
         );
     }
 
-    // Get the restaurant name, address, and cover picture from the data
-    // Assuming the item at index 15 contains the required information
     const { restaurantName, restaurantAddress, coverPic } = data[0];
 
     return (
         <div>
-            <Navbar/> {/* Render the navigation bar */}
+            <Navbar/> 
             <ImgContainer restaurantName={restaurantName} restaurantAddress={restaurantAddress} coverPic={coverPic}/> {/* Render the image container */}
             <div className="grid grid-cols-4 gap-5 absolute right-5">
-                {/* Render a list of cards for each item */}
                 {data.slice(1).map((item, index) => (
                     <Card key={index} title={item.title} price={item.price} rating={item.rating} imgUrl={item.imgUrl} />
                 ))}
