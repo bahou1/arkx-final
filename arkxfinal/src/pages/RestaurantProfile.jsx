@@ -3,21 +3,12 @@ import Navbar from '../components/Navbar';
 import ImgContainer from '../components/ImgContainer';
 import Card from '../components/Card';
 import Filters from '../components/Filters.jsx';
-import { BeatLoader } from 'react-spinners';
+import { HashLoader } from 'react-spinners';
 
-/**
- * Represents the RestaurantProfile component.
- * This component displays the profile of a restaurant, including its name, address, cover picture, and a list of cards.
- * The cards represent items available at the restaurant.
- */
 const RestaurantProfile = () => {
     const [data, setData] = useState([]); // Stores the data fetched from the API
     const [loading, setLoading] = useState(true); // Indicates whether the data is still loading
 
-    /**
-     * Fetches the restaurant profile data from the API and updates the state.
-     * This effect runs only once, when the component is mounted.
-     */
     useEffect(() => {
         fetch('http://localhost:3000/api/restaurant-profile')
             .then(response => response.json())
@@ -30,7 +21,7 @@ const RestaurantProfile = () => {
     if (loading) {
         return (
             <div className="flex justify-center items-center h-screen">
-                <BeatLoader color={"rgb(135, 169, 34)"} loading={loading} size={50} />
+                <HashLoader color={"rgb(135, 169, 34)"} loading={loading} size={200} />
             </div>
         );
     }

@@ -365,17 +365,18 @@ const Wallet = () => {
       </table>
 
       {/* Pagination */}
-      <div className="flex justify-center mt-4">
-        {pageNumbers.map((number) => (
-          <button
-            key={number}
-            onClick={() => handlePageChange(number)}
-            className={`mx-1 px-3 py-1 rounded-md ${number === currentPage ? 'bg-lime-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-          >
-            {number}
-          </button>
-        ))}
-      </div>
+      <div className="flex justify-center gap-3 mt-4">
+  <span className='font-bold font-lato text-lime-500 mt-1 '>Show more</span>
+  {pageNumbers.map((number) => (
+    <button
+      key={number}
+      onClick={() => handlePageChange(number)}
+      className={`mx-1 px-3 py-1 rounded-md ${number === currentPage ? 'bg-lime-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+    >
+      {number}
+    </button>
+  ))}
+</div>
 
       <style jsx>{`
         table {
