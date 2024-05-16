@@ -308,12 +308,12 @@ const Wallet = () => {
           ))}
         </div>
 
-        <div className="p-20 pr-60 bg-blue-500 rounded-lg shadow-md text-white">
-          <h3 className="text-xl font-bold">Credit Card</h3>
-          <p className="mt-2">**** **** **** 1234</p>
-          <p className="mt-2">John Doe</p>
-          <p className="mt-2">10/24</p>
-        </div>
+        <div className="p-20 pr-60 rounded-lg shadow-md text-white" style={{background: 'linear-gradient(135deg, #87A922 0%, #4A772F 100%)'}}>
+  <h3 className="text-xl font-bold">Credit Card</h3>
+  <p className="mt-2">**** **** **** 1234</p>
+  <p className="mt-2">John Doe</p>
+  <p className="mt-2">10/24</p>
+</div>
       </div>
 
       <table className="mt-8 w-full bg-white shadow-md rounded-lg overflow-hidden">
