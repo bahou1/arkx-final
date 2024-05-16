@@ -26,23 +26,23 @@ const ImgContainer = ({ restaurantName, restaurantAddress, coverPic }) => {
             <div style={{ width: '90vw', height: '22.5vw', backgroundImage: `url(${coverPic})`, backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }} className="mt-9 ">
                 <div className="absolute inset-0" style={{background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)'}}></div>
                 <div className="absolute right-0 bottom-5 flex text-white text-lg mb-2 pr-10 space-x-3">
-                    <div style={{ backgroundColor: '#87A922' }} className="rounded-full p-3 flex items-center space-x-2">
-                        <RiEBike2Line className="text-2xl" />
-                        <p className="text-base">18 MAD</p>
-                    </div>
-                    <div style={{ backgroundColor: '#87A922' }} className="rounded-full p-3 flex items-center space-x-2">
-                        <IoMdTime className="text-2xl" />
-                        <p className="text-base">15 - 20 mn'</p>
-                    </div>
-                    <div style={{ backgroundColor: '#87A922' }} className="rounded-full p-3 flex items-center space-x-2">
-                        <AiTwotoneLike className="text-2xl" />
-                        <p className="text-base">90%</p>
-                    </div>
-                    <div style={{ backgroundColor: '#87A922' }} className="rounded-full p-3 flex items-center space-x-2" onClick={toggleModal}>
-                        <MdMessage className="text-2xl" />
-                        <p className="text-base">Message</p>
-                    </div>
-                </div>
+    <div style={{ backgroundColor: '#87A922', transition: 'transform 0.3s ease-in-out' }} className="rounded-full p-3 flex items-center space-x-2 hover:transform hover:scale-110">
+        <RiEBike2Line className="text-2xl" />
+        <p className="text-base">18 MAD</p>
+    </div>
+    <div style={{ backgroundColor: '#87A922', transition: 'transform 0.3s ease-in-out' }} className="rounded-full p-3 flex items-center space-x-2 hover:transform hover:scale-110">
+        <IoMdTime className="text-2xl" />
+        <p className="text-base">15 - 20 mn'</p>
+    </div>
+    <div style={{ backgroundColor: '#87A922', transition: 'transform 0.3s ease-in-out' }} className="rounded-full p-3 flex items-center space-x-2 hover:transform hover:scale-110">
+        <AiTwotoneLike className="text-2xl" />
+        <p className="text-base">90%</p>
+    </div>
+    <div style={{ backgroundColor: '#87A922', transition: 'transform 0.3s ease-in-out' }} className="rounded-full p-3 flex items-center space-x-2 hover:transform hover:scale-110" onClick={toggleModal}>
+        <MdMessage className="text-2xl" />
+        <p className="text-base">Message</p>
+    </div>
+</div>
                 <div className="absolute bottom-5 left-0 pl-10 p-1">
                     <h2 className="text-white text-4xl font-bold">{restaurantName}</h2>
                     <div className="flex items-center text-white text-base">
