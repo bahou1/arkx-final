@@ -11,7 +11,7 @@ const SideMenu = ({ onMenuItemClick }) => {
                         <li>
                             <img src={Logo} alt="Logo" className="justify-center mb-20 w-30 h-15 mx-auto" />
                         </li>
-                        <MenuItem icon={<FaBars className="w-5 h-5" />} name="Dashboard" onClick={() => onMenuItemClick(null)} />
+                        <MenuItem icon={<FaBars className="w-5 h-5" />} name="Dashboard" onClick={() => onMenuItemClick('Dashboard')} />
                         <MenuItem icon={<FaRegListAlt className="w-5 h-5" />} name="Order List" onClick={() => onMenuItemClick('OrderList')} />
                         <MenuItem icon={<FaUserCircle className="w-5 h-5" />} name="Customer" onClick={() => onMenuItemClick('Customer')} />
                         <MenuItem icon={<FaRegCommentDots className="w-5 h-5" />} name="Chat" onClick={() => onMenuItemClick('Chat')} />
