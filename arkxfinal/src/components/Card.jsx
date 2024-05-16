@@ -9,9 +9,9 @@ const Card = ({ imgUrl, title, price, rating }) => {
     return (
         <div className="w-1/2 flex flex-col items-center gap-3">
             <div className="relative rounded-xl w-64 h-64 bg-cover bg-center" style={{ backgroundImage: `url(${imgUrl})` }}>
-                <button className="absolute top-0 right-0 bg-white rounded-full p-2.5 m-3">
-                    <AiOutlineHeart size={19} />
-                </button>
+            <button className="absolute top-0 right-0 bg-white rounded-full p-2.5 m-3 transition-colors duration-200 ease-in-out hover:bg-gray-800 hover:text-white">
+    <AiOutlineHeart size={19} />
+</button>
             </div>
             <h2 className="text-xl font-lato pl-4 font-medium whitespace-nowrap">{title}</h2>
             <div className="flex">
@@ -19,8 +19,7 @@ const Card = ({ imgUrl, title, price, rating }) => {
                 {isValidRating && [...Array(Math.floor(rating))].map((_, i) => <FaStar key={i} color="orange" />)}
             </div>
             <p className="text-xl font-lato font-medium">{price}</p>
-            <button className="rounded-md w-64 h-12 border-2 font-lato font-3xl border-black">Add to Cart</button>
-        </div>
+            <button className="rounded-md w-64 h-12 border-2 font-lato font-3xl border-black transition-colors duration-200 ease-in-out hover:bg-gray-800 hover:text-white">Add to Cart</button>        </div>
     );
 };
 
