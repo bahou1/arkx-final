@@ -9,6 +9,7 @@ import Analytics from '../components/DashboardComponents/Analytics';
 import Favorites from '../components/DashboardComponents/Favorites';
 import CustomerDetails from '../components/DashboardComponents/CutsomerDetails';
 import Dashboard from '../components/DashboardComponents/Dashboard'; // Assuming the component is named Dashboard.jsx
+import Menu from '../components/DashboardComponents/Menu';
 
 const DashboardPage = () => {
     const [activeComponent, setActiveComponent] = useState(null);
@@ -27,6 +28,8 @@ const DashboardPage = () => {
             </div>
             <div className="pl-8 flex flex-col flex-grow overflow-auto ml-72 gap-4"> 
                 {activeComponent === 'Dashboard' && <Dashboard/>}
+                {activeComponent === 'Menu' && <Menu/>} {/* Changed 'menu' to 'Menu' */}
+                {/* ... */}
                 {activeComponent === 'Customer' && (
                     <>
                         <SearchDash />

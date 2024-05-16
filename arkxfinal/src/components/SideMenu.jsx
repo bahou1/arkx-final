@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaRegListAlt, FaUserCircle, FaRegCommentDots, FaWallet, FaRegChartBar, FaRegStar, FaRegIdBadge, FaBars } from 'react-icons/fa';
+import { FaRegListAlt, FaUserCircle, FaRegCommentDots, FaWallet, FaRegChartBar, FaRegStar, FaRegIdBadge, FaBars, FaRegClipboard } from 'react-icons/fa';
 import Logo from '../assets/logo.png';
 
 const SideMenu = ({ onMenuItemClick }) => {
@@ -12,6 +12,7 @@ const SideMenu = ({ onMenuItemClick }) => {
                             <img src={Logo} alt="Logo" className="justify-center mb-20 w-30 h-15 mx-auto" />
                         </li>
                         <MenuItem icon={<FaBars className="w-5 h-5" />} name="Dashboard" onClick={() => onMenuItemClick('Dashboard')} />
+                        <MenuItem icon={<FaRegClipboard className="w-5 h-5" />} name="Menu" onClick={() => onMenuItemClick('Menu')} />
                         <MenuItem icon={<FaRegListAlt className="w-5 h-5" />} name="Order List" onClick={() => onMenuItemClick('OrderList')} />
                         <MenuItem icon={<FaUserCircle className="w-5 h-5" />} name="Customer" onClick={() => onMenuItemClick('Customer')} />
                         <MenuItem icon={<FaRegCommentDots className="w-5 h-5" />} name="Chat" onClick={() => onMenuItemClick('Chat')} />
@@ -31,7 +32,7 @@ const MenuItem = ({ icon, name, onClick }) => {
         <li className="flex items-center px-8 py-5 mb-4 transition-all duration-500 ease-in-out hover:bg-[#D9F3EA] hover:text-[#00B074] hover:border-l-4 hover:border-[#87A922]" onClick={onClick}>
             <div className="flex items-center">
                 {icon}
-                <span className="mx-4">{name}</span>
+                <span className="ml-4">{name}</span>
             </div>
         </li>
     );
