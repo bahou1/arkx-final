@@ -1,7 +1,7 @@
 /* JSX */
 import React from 'react';
 
-const CustomerTable = () => {
+const Customer = () => {
     // Sample data
     const data = [
         { id: 1, joinDate: "2020-01-01", name: "John", location: "New York", totalSpent: "$1,000.00", lastOrder: "$200.00" },
@@ -48,4 +48,4 @@ const CustomerTable = () => {
     );
 };
 
-export default CustomerTable;
+export default Customer;
