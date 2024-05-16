@@ -80,32 +80,41 @@ const Menu = () => {
 
 
         return (
-<div className="mt-4 w-full grid grid-cols-9 sm:grid-cols-9 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-12 pl-3">
+<div className="w-full gap-9 mt-4 mb-4 grid grid-cols-9 sm:grid-cols-9 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 pl-3 pr-3">
     {data.menu.map(item => (
         <div key={item._id} className="flex flex-col items-center gap-3 relative bg-white rounded-3xl pb-4">
-            <div className="relative rounded-full w-64 h-64 bg-cover bg-center top-0" style={{ backgroundImage: `url(${item.imgUrl})` }}>
+            <div className="relative rounded-full w-64 h-64 bg-cover bg-center " style={{ backgroundImage: `url(${item.imgUrl})` }}>
 
             </div>
             <p className="text-xl font-lato font-medium">{item.price}</p>
-            <div className="flex gap-3">
-                <button 
-                    className="rounded-md w-12 h-12 font-lato font-3xl flex items-center justify-center transition-colors duration-200 ease-in-out" 
-                    style={{ backgroundColor: '#FFF0ED', color: '#FF6D4D' }}
-                >
-                    <AiOutlineEdit size={19} />
-                </button>
-                <button 
-                    className="rounded-md w-12 h-12 font-lato font-3xl flex items-center justify-center transition-colors duration-200 ease-in-out" 
-                    style={{ backgroundColor: '#DFF0FA', color: '#2D9CDB' }}
-                >
-                    <AiOutlineEye size={19} />
-                </button>
-                <button 
-                    className="rounded-md w-12 h-12 font-lato font-3xl flex items-center justify-center transition-colors duration-200 ease-in-out" 
-                    style={{ backgroundColor: '#D9F3EA', color: '#00B074' }}
-                >
-                    <AiOutlineDelete size={19} />
-                </button>
+            <div className="flex gap-4 mt-8">
+                <div className="flex flex-col items-center">
+                    <button 
+                        className="rounded-2xl w-12 h-12 font-lato font-3xl flex items-center justify-center transition-colors duration-200 ease-in-out" 
+                        style={{ backgroundColor: '#FFF0ED', color: '#FF6D4D' }}
+                    >
+                        <AiOutlineEdit size={23} />
+                    </button>
+                    <p>Edit</p>
+                </div>
+                <div className="flex flex-col items-center">
+                    <button 
+                        className="rounded-2xl w-12 h-12 font-lato font-3xl flex items-center justify-center transition-colors duration-200 ease-in-out" 
+                        style={{ backgroundColor: '#DFF0FA', color: '#2D9CDB' }}
+                    >
+                        <AiOutlineEye size={23} />
+                    </button>
+                    <p>View</p>
+                </div>
+                <div className="flex flex-col items-center">
+                    <button 
+                        className="rounded-2xl w-12 h-12 font-lato font-3xl flex items-center justify-center transition-colors duration-200 ease-in-out" 
+                        style={{ backgroundColor: '#D9F3EA', color: '#00B074' }}
+                    >
+                        <AiOutlineDelete size={23} />
+                    </button>
+                    <p>Delete</p>
+                </div>
             </div>
         </div>
     ))}
