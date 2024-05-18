@@ -5,6 +5,7 @@ import RestaurantProfile from '../API/mod/RestaurantProfile.js';
 import Customer from '../API/mod/Customer.js';
 import Order from '../API/mod/order.js';
 import WalletOperation from '../API/mod/WalletOperation.js';
+import Menu from '../API/mod/Menu.js';
 
 const app = express();
 const port = 3000;
@@ -14,6 +15,19 @@ mongoose.connect('mongodb+srv://anwarbahou:benmolay@cluster0.xfsd1am.mongodb.net
     .catch(err => console.error('Could not connect to MongoDB', err));
 
 app.use(cors());
+
+
+app.get('/api/menu', async (req, res) => {
+    try {
+        const menus = await Menu.find();
+        console.log('Fetched menus:', menus);
+        res.json(menus);
+    } catch (error) {
+        console.error('Error fetching menus', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
 
 app.get('/api/restaurant-profile', async (req, res) => {
     try {
