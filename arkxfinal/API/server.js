@@ -13,8 +13,27 @@ const port = 3000;
 mongoose.connect('mongodb+srv://anwarbahou:benmolay@cluster0.xfsd1am.mongodb.net/items?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Could not connect to MongoDB', err));
-
+    app.use(cors());
+    
+    app.use(express.json());
 app.use(cors());
+
+app.delete('/api/menu/:identifier', async (req, res) => {
+    try {
+        const { identifier } = req.params;
+
+        const deletedItem = await Menu.findOneAndDelete({ identifier });
+        if (!deletedItem) {
+            return res.status(404).json({ error: 'Menu item not found' });
+        }
+
+        console.log('Deleted menu item:', deletedItem);
+        res.json({ message: 'Menu item deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting menu item:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
 
 app.get('/api/menu', async (req, res) => {
