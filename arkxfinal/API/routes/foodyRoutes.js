@@ -11,5 +11,6 @@ router.get('/restaurant-profile', controllers.getAllRestaurantProfiles);
 router.get('/customers', controllers.getAllCustomers);
 router.get('/orderlist', controllers.getAllOrders);
 router.get('/walletoperations', controllers.getAllWalletOperations);
+router.put('/menu/:identifier', controllers.editMenuItem);
 
 export default router;

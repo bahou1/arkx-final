@@ -7,7 +7,7 @@ const Menu = () => {
     const [showConfirmation, setShowConfirmation] = useState(false);
     const [identifierToDelete, setIdentifierToDelete] = useState(null);
     const [showEditModal, setShowEditModal] = useState(false);
-    const [editItem, setEditItem] = useState({ title: '', price: '', imgUrl: '' });
+    const [editItem, setEditItem] = useState({ title: '', price: '', imgUrl: '', identifier: '' });
 
     useEffect(() => {
         const fetchMenuData = async () => {
@@ -47,11 +47,7 @@ const Menu = () => {
             }
     
             // Remove the item from the UI
-            setMenuData(prevMenuData => {
-                const newMenuData = prevMenuData.filter(item => item.identifier !== identifier);
-                console.log('New menu data:', newMenuData); // Log the new state
-                return newMenuData;
-            });
+            setMenuData(prevMenuData => prevMenuData.filter(item => item.identifier !== identifier));
         } catch (error) {
             console.error('Error deleting menu item:', error);
         }
@@ -93,15 +89,20 @@ const Menu = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(editItem)
+                body: JSON.stringify({
+                    title: editItem.title,
+                    price: editItem.price,
+                })
             });
 
             if (!response.ok) {
                 throw new Error('Failed to update item');
             }
 
+            const updatedItem = await response.json();
+
             // Update the item in the UI
-            setMenuData(prevMenuData => prevMenuData.map(item => item.identifier === editItem.identifier ? editItem : item));
+            setMenuData(prevMenuData => prevMenuData.map(item => item.identifier === editItem.identifier ? updatedItem.updatedItem : item));
             setShowEditModal(false);
         } catch (error) {
             console.error('Error saving edited item:', error);

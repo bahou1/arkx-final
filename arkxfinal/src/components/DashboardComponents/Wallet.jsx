@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Pagination from '../helpers/pagination';
 
 const Wallet = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -12,11 +13,8 @@ const Wallet = () => {
     { id: 5, description: 'Payment received', amount: 150 },
     { id: 6, description: 'Payment sent', amount: -25 },
     { id: 7, description: 'Payment received', amount: 300 },
-    { id: 6, description: 'Payment sent', amount: -25 },
-
+    { id: 8, description: 'Payment sent', amount: -25 },
   ];
-
-
 
   const recentPayments = [
     {
@@ -291,18 +289,13 @@ const Wallet = () => {
     },
  
   ];
+
   // Calculate total number of pages
   const totalPages = Math.ceil(recentPayments.length / itemsPerPage);
 
   // Calculate the index range for the current page
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, recentPayments.length);
-
-  // Generate page numbers
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
-  }
 
   // Function to handle page change
   const handlePageChange = (pageNumber) => {
@@ -311,9 +304,7 @@ const Wallet = () => {
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-
       <div className="flex flex-row-reverse justify-center gap-9 items-center mb-4">
-        {/* Transactions */}
         <div className="grid grid-cols-2 gap-3.5">
           {transactions.map((transaction) => (
             <div
@@ -328,16 +319,14 @@ const Wallet = () => {
           ))}
         </div>
 
-        {/* Credit Card Info */}
         <div className="p-20 pr-60 rounded-lg shadow-md text-white" style={{background: 'linear-gradient(135deg, #87A922 0%, #4A772F 100%)'}}>
           <h3 className="text-4xl font-bold">Credit Card</h3>
-          <p className="mt-2 text-xl ">**** **** **** 1234</p>
+          <p className="mt-2 text-xl">**** **** **** 1234</p>
           <p className="mt-2 text-xl">John Doe</p>
           <p className="mt-2 text-xl">10/24</p>
         </div>
       </div>
 
-      {/* Recent Payments Table */}
       <table className="mt-8 w-full bg-white shadow-md rounded-lg overflow-hidden">
         <thead>
           <tr className="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">
@@ -364,18 +353,7 @@ const Wallet = () => {
       </table>
 
       {/* Pagination */}
-      <div className="flex justify-center gap-3 mt-4">
-  <span className='font-bold font-lato text-lime-500 mt-1 '>Show more</span>
-  {pageNumbers.map((number) => (
-    <button
-      key={number}
-      onClick={() => handlePageChange(number)}
-      className={`mx-1 px-3 py-1 rounded-md ${number === currentPage ? 'bg-lime-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-    >
-      {number}
-    </button>
-  ))}
-</div>
+      <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
 
       <style jsx>{`
         table {
