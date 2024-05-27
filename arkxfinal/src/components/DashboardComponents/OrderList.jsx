@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SearchDash from '../SearchDash';
-import Pagination from '../helpers/pagination'; // Import the Pagination component
+import Pagination from '../helpers/pagination';
 
 const OrderList = () => {
   const [orders, setOrders] = useState([]);
@@ -12,7 +12,7 @@ const OrderList = () => {
       .then(response => response.json())
       .then(data => {
         setOrders(data);
-        setFilteredOrders(data); // Initialize filteredOrders with all orders
+        setFilteredOrders(data); 
       })
       .catch(error => console.error('Error fetching orders:', error));
   }, []);
@@ -44,7 +44,7 @@ const OrderList = () => {
       order.id.toString().includes(query) ||
       order.date.toLowerCase().includes(query) ||
       order.customerName.toLowerCase().includes(query) ||
-      order.location.toLowerCase().includes(query) || // Include location in search criteria
+      order.location.toLowerCase().includes(query) || 
       order.amount.toString().includes(query) ||
       order.status.toLowerCase().includes(query)
     );
@@ -61,9 +61,9 @@ const OrderList = () => {
   const totalPages = Math.ceil(filteredOrders.length / itemsPerPage);
 
   return (
-    <div className="mt-5 mr-5 flex flex-col">
+    <div className="mr-5 flex flex-col">
       <SearchDash onSearch={handleSearch} />
-      <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div className="-my-2 mt-3 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table className="min-w-full divide-y divide-gray-200">

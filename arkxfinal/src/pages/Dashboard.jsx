@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SideMenu from '../components/SideMenu';
-import SearchDash from '../components/SearchDash';
 import OrderList from '../components/DashboardComponents/OrderList';
 import Customer from '../components/Customer';
 import Chat from '../components/DashboardComponents/Chat';
@@ -20,6 +19,8 @@ const DashboardPage = () => {
     };
 
     console.log("Active component:", activeComponent);
+
+    document.title = "Dashboard"; 
 
     return (
         <div className="bg-gray-200 h-full flex fixed w-full h-full">

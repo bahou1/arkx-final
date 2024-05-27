@@ -12,6 +12,9 @@ const Explore = () => {
                 <li>
                     <Link to="/restaurantprofile" className="text-lg text-blue-500 hover:text-blue-700">Go to Restaurant Profile</Link>
                 </li>
+                <li>
+                    <Link to="/Map" className="text-lg text-blue-500 hover:text-blue-700">Map component testing</Link>
+                </li>
             </ul>
         </div>
     );

@@ -1,9 +1,9 @@
 import React from 'react'
+import ChartComponent from './Dashboard-section/ChartComponent'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
+<ChartComponent/>)
 }
 
 export default Dashboard
